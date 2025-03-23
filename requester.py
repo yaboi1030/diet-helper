@@ -1,9 +1,12 @@
 import requests
 
-api_key = "YOUR_API_KEY"
-url = f"https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&api_key={api_key}"
+def get_info(barcode_id):
+    url = "https://world.openfoodfacts.org/api/v0/product/" + str(barcode_id) + ".json"
 
-response = requests.get(url)
-data = response.json()
 
-print(data)
+    response = requests.get(url)
+    return response.json()
+
+
+
+get_info()
