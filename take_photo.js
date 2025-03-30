@@ -1,5 +1,12 @@
 function take_photo() {
 
+    const photo = document.getElementById('photo');
+
+    const canvas = document.getElementById('canvas');
+
+    const video = document.getElementById('video');
+
+
     // Draw the current video frame onto the canvas
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -11,13 +18,6 @@ function take_photo() {
     photo.src = imageData;
 }
 
-
-
-const photo = document.getElementById('photo');
-
-const canvas = document.getElementById('canvas');
-
-const video = document.getElementById('video');
 
 
 const button = document.getElementById('snap');
