@@ -52,5 +52,17 @@ function startCamera() {
     }
 }
 
+
+
+function resizeVideo() {
+    const video = document.getElementById('video');
+    video.style.width = `${window.innerWidth * 0.8}px`;
+    video.style.height = `${window.innerHeight * 0.6}px`;
+  }
+  
+  window.addEventListener("resize", resizeVideo);
+  resizeVideo(); // Run on load
+
 // Start the camera when the page loads
 window.onload = startCamera;
+
